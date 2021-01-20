@@ -49,9 +49,9 @@
 .posts {
   .post-teaser {
     @extend %padding-post;
-    width: 100%;
-    margin-bottom: 0;
-    display: inline-block;
+    max-width: $m-break;
+    margin-left: auto;
+    margin-right: auto;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
 

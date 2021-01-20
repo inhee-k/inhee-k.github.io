@@ -14,11 +14,11 @@
 }
 
 .site-header {
-  padding: 2% 5% 1% 5%;
+  padding: 5px;
   background: $brand-color;
-  display: inline-block;
-  float: left;
-  width: 100%;
+  max-width: $m-break;
+  margin-left: auto;
+  margin-right: auto;
 
   .separator {
     user-select: none;
@@ -34,12 +34,11 @@
   }
 
   .avatar {
-    height: 3em;
-    width: 3em;
+    height: 2.5em;
+    width: 2.5em;
     float: left;
-    margin-top: -8px;
     border-radius: 0.2em;
-    padding: 10px 10px;
+    padding: 5px;
 
   }
 
@@ -60,9 +59,8 @@ nav {
     margin: 0;
     padding: 0;
     list-style: none;
-    line-height: 1.5;
+    line-height: 2.5;
     float: right;
-    text-align: right;
     display: block;
   }
 
@@ -97,19 +95,9 @@ nav {
   }
 }
 
-@media (max-width: $sm-break) {
-  header.site-header {
-    padding: 2% 2% 1% 2%;
-  }
-}
-
 @media screen and (max-width: $break) {
-  
-  .site-header {
-    img.avatar {
-      margin-top: -7px
-    }
 
+  .site-header {
     .site-title {
       margin-top: 7px;
     }
