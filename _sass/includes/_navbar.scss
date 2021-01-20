@@ -14,7 +14,7 @@
 }
 
 .site-header {
-  padding: 2% 2% 1% 2%;
+  padding: 2% 5% 1% 5%;
   background: $brand-color;
   display: inline-block;
   float: left;
@@ -91,9 +91,15 @@ nav {
 
 /* ---- Responsive ---- */
 
-@media (min-width: $break) {
+@media (min-width: #{$break+1}) {
   a#pull {
     display: none;
+  }
+}
+
+@media (min-width: $break) {
+  header.site-header {
+    padding: 2% 2% 1% 2%;
   }
 }
 
