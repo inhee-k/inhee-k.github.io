@@ -46,7 +46,9 @@
     float: left;
     font-weight: bold;
     font-family: $font-family-logo;
-    font-size: 1.3em;
+    font-size: (4em / 3);
+    line-height: 2.3;
+    margin-left: 5px;
   }
 }
 
@@ -97,12 +99,6 @@ nav {
 }
 
 @media screen and (max-width: $break) {
-
-  .site-header {
-    .site-title {
-      margin-top: 7px;
-    }
-  }
 
   nav {
     height: auto;
