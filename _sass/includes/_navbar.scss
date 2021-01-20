@@ -97,12 +97,14 @@ nav {
   }
 }
 
-@media screen and (max-width: $break) {
-
+@media (max-width: $sm-break) {
   header.site-header {
     padding: 2% 2% 1% 2%;
   }
+}
 
+@media screen and (max-width: $break) {
+  
   .site-header {
     img.avatar {
       margin-top: -7px
