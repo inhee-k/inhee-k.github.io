@@ -1,3 +1,35 @@
+.search-container {
+  position: relative;
+  height: 2em;
+
+  #search-input {
+    display: none;
+    width: 15em;
+    margin-left: auto;
+  }
+
+  #search-container .find-icon {
+    position: absolute;
+    right: 1em;
+    top: .5em;
+  }
+  
+  #results-container {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    background: #FFF;
+    border: 1px solid #CCC;
+    position: absolute;
+    right: 0;
+    top: 2.4em;
+    list-style: none;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 2px;
+  }
+}
+
 .search-bar {
   display: block;
   width: 100%;

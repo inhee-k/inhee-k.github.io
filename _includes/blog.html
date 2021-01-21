@@ -1,7 +1,11 @@
-<input type="text" id="search-input" placeholder="검색어를 입력하세요.." class="search-bar" autofocus>
-<br>
-<br>
-<ul id="results-container"></ul>
+<div class="search-container">
+  <input type="text" id="search-input" class="search-bar" placeholder="검색어를 입력하세요.." style="display: block;">
+  <div class="find-icon">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+
+  <ul id="results-container" style="display: none;"></ul>
+</div>
 
 <div class="posts">
     {% for post in paginator.posts %}
@@ -41,6 +45,7 @@
 
 <section>
     <script type="text/javascript">
+      if ($('#search-input').length > 0) {
         SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
@@ -52,8 +57,14 @@
             exclude: []
         })
 
-        $('#search-input').on('input', function(){
-          $('div.posts').css('display', $(this).val() !== ''? 'block' : 'none');
-        });
+    $('.find-icon').click(function(){
+      $('#search-input').toggle();
+      if ($('#search-input:visible').length > 0)
+        ;
+      else
+        $('#results-container').hide();
+    });
+  }
+
     </script>
 </section>
