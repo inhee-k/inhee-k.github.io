@@ -46,6 +46,13 @@
 <section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js">
       $(document).ready(function() {
+        $('.find-icon').click(function() {
+          $('#search-input').toggle();
+          if ($('#search-input:visible').length > 0)
+            ;
+          else
+            $('#results-container').hide();
+        });
 
         if ($('#search-input').length > 0) {
           SimpleJekyllSearch({
@@ -57,15 +64,8 @@
               limit: 10,
               fuzzy: false,
               exclude: []
-          })
-
-          $('.find-icon').click(function() {
-            $('#search-input').toggle();
-            if ($('#search-input:visible').length > 0)
-              ;
-            else
-              $('#results-container').hide();
           });
+          $('#results-container').show();
         }
       });
     </script>
