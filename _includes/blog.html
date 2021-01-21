@@ -45,6 +45,14 @@
 
 <section>
     <script type="text/javascript">
+      $('.find-icon').click(function(){
+        $('#search-input').toggle();
+        if ($('#search-input:visible').length > 0)
+          ;
+        else
+          $('#results-container').hide();
+      });
+
       if ($('#search-input').length > 0) {
         SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
@@ -56,15 +64,7 @@
             fuzzy: false,
             exclude: []
         })
-
-    $('.find-icon').click(function(){
-      $('#search-input').toggle();
-      if ($('#search-input:visible').length > 0)
-        ;
-      else
-        $('#results-container').hide();
-    });
-  }
+      }
 
     </script>
 </section>
