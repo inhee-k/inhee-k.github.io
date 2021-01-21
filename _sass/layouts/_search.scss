@@ -1,6 +1,8 @@
 .search-container {
   max-width: $m-break;
+  height: 2em;
   margin: 5px auto;
+  position: relative;
 
   #search-input {
     display: none;
