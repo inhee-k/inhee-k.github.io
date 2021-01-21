@@ -45,28 +45,32 @@
 
 <section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js">
-      $(document).ready(function() {
+      $(function() {
         $('.find-icon').click(function() {
-          $('#search-input').toggle();
-          if ($('#search-input:visible').length > 0)
-            ;
-          else
-            $('#results-container').hide();
+          if($('#search-input').css('display') == 'none') {
+            $('#search-input').css('display','block');
+          } else {
+            if ($('#search-input').length > 0) {
+              ;
+            }
+            else {
+              $('#search-input').css('display','none');
+              $('#results-container').hide();
+            }
+          }
         });
 
-        if ($('#search-input').length > 0) {
-          SimpleJekyllSearch({
-              searchInput: document.getElementById('search-input'),
-              resultsContainer: document.getElementById('results-container'),
-              json: '{{ "/assets/data/search.json" | relative_url }}',
-              searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="meta">{date} <div class="right"><i class="fa fa-tag"></i> {tags}</div></div><p>{excerpt}</p></div><hr> ',
-              noResultsText: '{{ site.data.language.str_no_result_found | default: "검색 결과가 없습니다." }}',
-              limit: 10,
-              fuzzy: false,
-              exclude: []
-          });
-          $('#results-container').show();
-        }
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ "/assets/data/search.json" | relative_url }}',
+            searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="meta">{date} <div class="right"><i class="fa fa-tag"></i> {tags}</div></div><p>{excerpt}</p></div><hr> ',
+            noResultsText: '{{ site.data.language.str_no_result_found | default: "검색 결과가 없습니다." }}',
+            limit: 10,
+            fuzzy: false,
+            exclude: []
+        });
+        $('#results-container').show();
       });
     </script>
 </section>
