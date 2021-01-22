@@ -39,7 +39,8 @@
 </div>
 
 <section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
       $(function(){
         $('#search-input').keyup(function(){
           if($(this).val().length == 0) {
@@ -49,9 +50,7 @@
             $('#results-container').show();
           }
         });
-      });
-    </script>
-    <script type="text/javascript">
+
         SimpleJekyllSearch({
           searchInput: document.getElementById('search-input'),
           resultsContainer: document.getElementById('results-container'),
@@ -62,5 +61,6 @@
           fuzzy: false,
           exclude: []
         })
+      });
     </script>
 </section>
