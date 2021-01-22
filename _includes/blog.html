@@ -1,5 +1,5 @@
 <div class="search-container">
-  <input type="text" id="search-input" placeholder="Enter keywords..." class="search-bar" autofocus>
+  <input type="text" id="search-input" placeholder="search.." class="search-bar">
   <div class="find-icon">
     <i class="fa fa-search" aria-hidden="true"></i>
   </div>
@@ -44,8 +44,8 @@
           searchInput: document.getElementById('search-input'),
           resultsContainer: document.getElementById('results-container'),
           json: '{{ "/assets/data/search.json" | relative_url }}',
-          searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="meta">{date} <div class="right"><i class="fa fa-tag"></i> {tags}</div></div><p>{excerpt}</p></div><hr> ',
-          noResultsText: '{{ site.data.language.str_no_result_found | default: "검색 결과가 없습니다." }}',
+          searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="right meta">{date}</div><hr> ',
+          noResultsText: '{{ site.data.language.str_no_result_found | default: "No result found" }}',
           limit: 10,
           fuzzy: false,
           exclude: []

@@ -1,6 +1,6 @@
 .search-container {
   max-width: $m-break;
-  height: 2em;
+  height: 2.5em;
   margin: 5px auto;
   position: relative;
 
@@ -53,7 +53,7 @@
   .find-icon {
     position: absolute;
     right: 1em;
-    top: .5em;
+    top: .7em;
   }
 
   #results-container {
@@ -64,7 +64,7 @@
     border: 1px solid #CCC;
     position: absolute;
     right: 0;
-    top: 2.4em;
+    top: 2.6em;
     list-style: none;
     -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
