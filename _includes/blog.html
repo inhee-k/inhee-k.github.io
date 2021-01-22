@@ -39,12 +39,24 @@
 </div>
 
 <section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+      $(function(){
+        $('#search-input').keyup(function(){
+          if($(this).val().length == 0) {
+            $('#results-container').hide();
+          }
+          else {
+            $('#results-container').show();
+          }
+        });
+      });
+    </script>
     <script type="text/javascript">
         SimpleJekyllSearch({
           searchInput: document.getElementById('search-input'),
           resultsContainer: document.getElementById('results-container'),
           json: '{{ "/assets/data/search.json" | relative_url }}',
-          searchResultTemplate: '<div class="search-title"><a href="{url}"><h3> {title}</h3></a><div class="search-date">{date}</div></div><hr> ',
+          searchResultTemplate: '<div class="search-title"><a href="{url}">{title}</a><div class="search-date">{date}</div></div><hr> ',
           noResultsText: '{{ site.data.language.str_no_result_found | default: "No result found" }}',
           limit: 10,
           fuzzy: false,
