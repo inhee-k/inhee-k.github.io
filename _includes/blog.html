@@ -1,9 +1,7 @@
-<input type="text" id="search-input" class="search-bar" placeholder="검색어를 입력하세요..">
-<div class="find-icon">
-  <i class="fa fa-search" aria-hidden="true"></i>
-</div>
-
-<ul id="results-container" style="display: none;"></ul>
+<input type="text" id="search-input" placeholder="Enter keywords..." class="search-bar" autofocus>
+<br>
+<br>
+<ul id="results-container"></ul>
 
 <div class="posts">
     {% for post in paginator.posts %}
