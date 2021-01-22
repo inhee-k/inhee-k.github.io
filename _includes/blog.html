@@ -42,8 +42,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(function(){
+        $('.find-icon').click(function(){
+          $('#search-input').toggle();
+          if ($('#search-input:visible').length > 0)
+            ;
+          else
+            $('#results-container').hide();
+        });
+
         $('#search-input').keyup(function(){
-          if($(this).val().length == 0) {
+          if($(this).length == 0) {
             $('#results-container').hide();
           }
           else {
