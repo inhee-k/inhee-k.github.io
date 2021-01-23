@@ -73,19 +73,57 @@ nav {
   }
 
   a {
-    &:hover {
-      color: $link-color;
-    }
-
     &#pull {
-      i {
-        margin-top: 13px;
-        margin-right: 10px;
-        float: right;
+      display: block;
+      width:28px;
+      height: 30px;
+      margin: 15px 5px 0px auto;
+
+      span {
+        position: relative;
+        display: block;
       }
 
+      span:after,
+      span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -9px;
+      }
+
+      span:after {
+        top: 9px;
+      }
+
+      span,
+      span:before,
+      span:after {
+        width: 100x;
+        height: 5px;
+        background-color: $text-color;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+      }
     }
 
+    &#pull.on span {
+      background-color: transparent;
+
+      &:before {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      &:after {
+        transform: rotate(-45deg) translate(7px, -8px);
+      }
+    }
+
+    &#pull.on span + nav ul {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
