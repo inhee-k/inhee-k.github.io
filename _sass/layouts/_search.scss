@@ -1,13 +1,16 @@
+.blog-wrapper {
+  padding: 1em;
+}
+
 .search-container {
   max-width: $m-break;
   height: 2.5em;
-  margin: 5px auto;
   position: relative;
 
   .search-bar {
-    display: block;
+    display: none;
     width: 15em;
-    padding: 10px;
+    padding: .6em;
     margin-left: auto;
 
     background: $background-color none;
@@ -38,16 +41,6 @@
     &::-webkit-input-placeholder {
       color: $search-color;
     }
-
-    input {
-      &[type=text] {
-        height: 46px;
-        padding: 10px 16px;
-        font-size: 18px;
-        line-height: 1.33;
-        border-radius: 6px;
-      }
-    }
   }
 
   .find-icon {
@@ -59,7 +52,7 @@
   #results-container {
     display: none;
     padding: 10px;
-    width: 50%;
+    width: 70%;
     background: #FFF;
     border: 1px solid #ccc;
     position: absolute;
@@ -72,6 +65,8 @@
   }
 
   .search-title {
+    border-bottom: 1px solid #ccc;
+
     a {
       display: block;
       font-size: 1.3em;
@@ -90,5 +85,11 @@
       color: #636363;
       font-size: .9em;
     }
+  }
+}
+
+@media (max-width: $break) {
+  .search-container #results-container {
+    width: 100%;
   }
 }

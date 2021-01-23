@@ -1,53 +1,57 @@
-<div class="search-container">
-  <input type="text" id="search-input" placeholder="search.." class="search-bar">
-  <div class="find-icon">
-    <i class="fa fa-search" aria-hidden="true"></i>
-  </div>
-  <ul id="results-container"></ul>
-</div>
-<div class="posts">
-    {% for post in paginator.posts %}
-    <div class="post-teaser">
-        {% if post.thumbnail %}
-        <div class="post-img">
-            <a aria-label="{{ post.title }}" href="{{ post.url | relative_url }}">
-                <img alt="{{ post.title }}" src="{{ post.thumbnail | relative_url }}">
-            </a>
-        </div>
-        {% endif %}
-        <span>
-          <header>
-            <h1>
-              <a aria-label="{{ post.title }}" class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title }}
-              </a>
-            </h1>
-            {% include post_info.html author=post.author date=post.date %}
-          </header>
-          {% if site.excerpt or site.theme_settings.excerpt %}
-              <div class="excerpt">
-                  {% if site.excerpt == "truncate" %}
-                     {{ post.content | strip_html | truncate: '250' | escape }}
-                  {% else %}
-                     {{ post.excerpt | strip_html | escape }}
-                  {% endif %}
-              </div>
-          {% endif %}
-      </span>
+<div class="blog-wrapper">
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="search.." class="search-bar">
+    <div class="find-icon">
+      <i class="fa fa-search" aria-hidden="true"></i>
     </div>
-    {% endfor %}
+    <ul id="results-container"></ul>
+  </div>
+  <div class="posts">
+      {% for post in paginator.posts %}
+      <div class="post-teaser">
+          {% if post.thumbnail %}
+          <div class="post-img">
+              <a aria-label="{{ post.title }}" href="{{ post.url | relative_url }}">
+                  <img alt="{{ post.title }}" src="{{ post.thumbnail | relative_url }}">
+              </a>
+          </div>
+          {% endif %}
+          <span>
+            <header>
+              <h1>
+                <a aria-label="{{ post.title }}" class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title }}
+                </a>
+              </h1>
+              {% include post_info.html author=post.author date=post.date %}
+            </header>
+            {% if site.excerpt or site.theme_settings.excerpt %}
+                <div class="excerpt">
+                    {% if site.excerpt == "truncate" %}
+                       {{ post.content | strip_html | truncate: '250' | escape }}
+                    {% else %}
+                       {{ post.excerpt | strip_html | escape }}
+                    {% endif %}
+                </div>
+            {% endif %}
+        </span>
+      </div>
+      {% endfor %}
+  </div>
 </div>
-
 <section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(function(){
         $('.find-icon').click(function(){
-          $('#search-input').toggle();
-          if ($('#search-input:visible').length > 0)
-            ;
-          else
+          if ($('#search-input:visible').length > 0) {
+            $('#search-input').hide();
+          }
+          else {
+            $('#search-input').val('');
+            $('#search-input').css('display', 'block');
             $('#results-container').hide();
+          }
         });
 
         $('#search-input').keyup(function(){
@@ -63,7 +67,7 @@
           searchInput: document.getElementById('search-input'),
           resultsContainer: document.getElementById('results-container'),
           json: '{{ "/assets/data/search.json" | relative_url }}',
-          searchResultTemplate: '<div class="search-title"><a href="{url}">{title}</a><div class="search-date">{date}</div></div><hr> ',
+          searchResultTemplate: '<div class="search-title"><a href="{url}">{title}</a><div class="search-date">{date}</div></div>',
           noResultsText: '{{ site.data.language.str_no_result_found | default: "No result found" }}',
           limit: 10,
           fuzzy: false,
