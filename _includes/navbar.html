@@ -14,27 +14,44 @@
 
     <!-- Toggle menu -->
     <nav class="clear">
-    <a aria-label="pull" id="pull" class="toggle" href="#">
-    <span></span>
-    </a>
+	    <a aria-label="pull" id="pull" class="toggle" href="#">
+	    	<span></span>
+	    </a>
 
-    <!-- Menu -->
-    <ul class="hide">
-        {% assign name_page = "" %}
+	    <!-- Menu -->
+			<div class="slide">
+		    <ul class="hide">
+		        {% assign name_page = "" %}
 
-        {% for page in site.pages %}
-            {% unless page.title == null or page.hide or name_page contains page.title %}
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
-                    {% if page.icon %} <i class="fa {{ page.icon }}" aria-hidden="true"></i>
-                    {% else %} {{ page.title }} {% endif%}
-                </a>
-            </li>
-            {% endunless %}
-            {% assign name_page = page.title | append: name_page %}
-        {% endfor %}
-    </ul>
-
+		        {% for page in site.pages %}
+		            {% unless page.title == null or page.hide or name_page contains page.title %}
+		            <li class="separator"> | </li>
+		            <li>
+		                <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
+		                    {% if page.icon %} <i class="fa {{ page.icon }}" aria-hidden="true"></i>
+		                    {% else %} {{ page.title }} {% endif%}
+		                </a>
+		            </li>
+		            {% endunless %}
+		            {% assign name_page = page.title | append: name_page %}
+		        {% endfor %}
+		    </ul>
+			</div>
 	</nav>
 </header>
+<section>
+	<script type="text/javascript">
+		$(function(){
+			$('nav a#pull').click(function(){
+				if($(this).hasClass('on')) {
+					$(this).removeClass('on');
+					$('nav div.slide').slideUp();
+				}
+				else {
+					$(this).addClass('on');
+					$('nav div.slide').slideDown();
+				}
+			});
+		});
+	</script>
+</section>
