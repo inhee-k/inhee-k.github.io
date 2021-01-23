@@ -50,12 +50,12 @@
           else {
             $('#search-input').val('');
             $('#search-input').css('display', 'block');
-            $('#results-container').hide();
           }
+          $('#results-container').hide();
         });
 
         $('#search-input').keyup(function(){
-          if($(this).length == 0) {
+          if($(this).val().length == 0) {
             $('#results-container').hide();
           }
           else {
