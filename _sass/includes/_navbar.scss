@@ -54,31 +54,31 @@
 
 /////////////////////////////////////////
 
-#toggle {
+#toggle2 {
   display: block;
   width: 28px;
   height: 30px;
   margin: 30px auto 10px;
 }
 
-#toggle span:after,
-#toggle span:before {
+#toggle2 span:after,
+#toggle2 span:before {
   content: "";
   position: absolute;
   left: 0;
   top: -9px;
 }
-#toggle span:after{
+#toggle2 span:after{
   top: 9px;
 }
-#toggle span {
+#toggle2 span {
   position: relative;
   display: block;
 }
 
-#toggle span,
-#toggle span:after,
-#toggle span:before {
+#toggle2 span,
+#toggle2 span:after,
+#toggle2 span:before {
   width: 100%;
   height: 5px;
   background-color: #888;
@@ -88,16 +88,16 @@
 }
 
 /* on activation */
-#toggle.on span {
+#toggle2.on span {
   background-color: transparent;
 }
-#toggle.on span:before {
+#toggle2.on span:before {
   transform: rotate(45deg) translate(5px, 5px);
 }
-#toggle.on span:after {
+#toggle2.on span:after {
   transform: rotate(-45deg) translate(7px, -8px);
 }
-#toggle.on + #menu {
+#toggle2.on + #menu {
   opacity: 1;
   visibility: visible;
 }
