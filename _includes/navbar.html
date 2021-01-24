@@ -48,9 +48,11 @@
 			$('nav a#pull').click(function(){
 				if($(this).hasClass('on')) {
 					$(this).removeClass('on');
+					$('.dropdownContain').css('top', '0px');
 				}
 				else {
 					$(this).addClass('on');
+					$('.dropdownContain').css('top', '-400px');
 				}
 			});
 		});
