@@ -22,7 +22,7 @@
 			<div class="dropdownContain">
 				<div class="dropOut">
 					<div class="triangle"></div>
-			    <ul class="hide">
+			    <ul>
 			        {% assign name_page = "" %}
 
 			        {% for page in site.pages %}
@@ -48,7 +48,7 @@
 			$('nav a#pull').click(function(){
 				if($(this).hasClass('on')) {
 					$(this).removeClass('on');
-					$('.dropdownContain').css('top', '0px');
+					$('.dropdownContain').css('top', '50px');
 				}
 				else {
 					$(this).addClass('on');
