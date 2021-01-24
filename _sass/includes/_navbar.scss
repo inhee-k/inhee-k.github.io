@@ -146,10 +146,13 @@ nav {
       right: 5px;
       top: -400px;
 
+      &.hide {
+        top: 50px;
+      }
+
       .dropOut {
         background: white;
         float: left;
-        margin-top: 0px;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
@@ -163,24 +166,19 @@ nav {
         transition: all .1s ease-out;
 
         .triangle {
-          width: 0;
-          height: 0;
           position: absolute;
           border-left: 8px solid transparent;
           border-right: 8px solid transparent;
           border-bottom: 8px solid white;
           top: -8px;
           right: 10px;
-          margin-left: -8px;
         }
 
         ul {
-          padding: 10px;
+          padding: 10px 20px;
           line-height: 2.5em;
 
           li {
-            text-align: center;
-            color: #777;
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;

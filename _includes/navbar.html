@@ -19,7 +19,7 @@
 	    </a>
 
 	    <!-- Menu -->
-			<div class="dropdownContain">
+			<div class="dropdownContain hide">
 				<div class="dropOut">
 					<div class="triangle"></div>
 			    <ul>
@@ -48,11 +48,11 @@
 			$('nav a#pull').click(function(){
 				if($(this).hasClass('on')) {
 					$(this).removeClass('on');
-					$('.dropdownContain').css('top', '50px');
+					$('.dropdownContain').addClass('hide');
 				}
 				else {
 					$(this).addClass('on');
-					$('.dropdownContain').css('top', '-400px');
+					$('.dropdownContain').removeClass('hide');
 				}
 			});
 		});
