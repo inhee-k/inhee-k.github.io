@@ -140,18 +140,10 @@ nav {
   nav {
     height: auto;
 
-    .separator {
-      display: none !important;
-    }
-
     ul {
       width: 100%;
       line-height: 2em;
       overflow: hidden;
-
-      // /* fade out, then shrink */
-      // transition: opacity .25s 0s, font-size .25s 0s;
-      // transition-delay: 0s;
 
       &.hide {
         font-size: 0;
