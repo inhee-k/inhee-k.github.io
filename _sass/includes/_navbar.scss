@@ -131,7 +131,6 @@ nav {
 }
 
 @media screen and (max-width: $break) {
-
   nav {
     height: auto;
 
@@ -155,7 +154,6 @@ nav {
         position: relative;
         background: $background-color;
         float: left;
-        opacity: 1;
         border: 1px solid #e6e6e6;
         border-radius: 4px;
         box-shadow: 0 1px 6px rgba(0,0,0,.15);
@@ -183,16 +181,18 @@ nav {
           right: 10px;
         }
 
-        &.hide {
-          opacity: 0;
-        }
-
         ul {
           padding: 10px 20px;
           line-height: 2.5em;
 
           li {
             border-radius: 4px;
+
+            .fa-tags:before {
+              font-family: $font-family-main;
+              font-weight: bold;
+              content: "Tags";
+            }
           }
         }
       }
