@@ -28,7 +28,7 @@ cookie_consent: false                                   # To respect the usage o
 disqus_shortname: "inicn"                               # Your discus shortname for comments
 
 # PAGINATION
-paginate: 2
+paginate: 5
 paginate_path: "/page:num"
 
 # # PORTFOLIO
