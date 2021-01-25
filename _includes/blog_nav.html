@@ -1,5 +1,9 @@
 <div class="pagination">
-  <a href="{{ '/' | relative_url }}">1</a>
+  {% if paginator.page == 1 %}
+    <a href="{{ '/' | relative_url }}" class="page-number current">1</a>
+  {% else %}
+    <a href="{{ '/' | relative_url }}" class="page-number">1</a>
+  {% endif %}
   {% if paginator.total_pages < 5 %}
     {% for idx in (2..paginator.total_pages) %}
       {% if idx == paginator.page %}
