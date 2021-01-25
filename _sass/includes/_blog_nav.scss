@@ -22,7 +22,7 @@
     border-radius: 5px;
     line-height: 1.9em;
 
-    &:hover, a.page-number.current {
+    &:hover, &.current {
       background: white;
       border: 1px solid $link-color;
     }
