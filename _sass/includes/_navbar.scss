@@ -140,7 +140,6 @@ nav {
       z-index: 2;
       right: 5px;
       top: 50px;
-      opacity: 1;
     	-webkit-transition: all .1s ease-out;
     	-moz-transition: all .1s ease-out;
     	-ms-transition: all .1s ease-out;
@@ -149,13 +148,16 @@ nav {
 
       &.hide {
         top: -400px;
-        opacity: 0;
       }
 
       .dropOut {
         position: relative;
         background: $background-color;
         float: left;
+        border: 1px solid #e6e6e6;
+
+        opacity: 1;
+        margin-top: 8px;
 
         border-radius: 4px;
         box-shadow: 0 1px 6px rgba(0,0,0,.15);
@@ -182,14 +184,15 @@ nav {
         }
 
         &:after {
-          border-color: $background-color;
+          border-color: rgba(255,255,255,0);
           border-bottom-color: $background-color;
           border-width: 8px;
           right: 10px;
         }
 
         &.hide {
-
+          opacity: 0;
+          margin-top: 0px;
         }
 
         ul {
