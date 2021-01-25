@@ -9,9 +9,9 @@
       {% for idx in (2..paginator.total_pages) %}
         <a href="{{ site.paginate_path | relative_url | replace: ':num', idx }}"> {{ idx }} </a>
       {% endfor %}
-      <a> ... </a>
+      <span> ... </span>
     {% else %}
-      <a> ... </a>
+      <span> ... </span>
       {% if paginator.page == paginator.total_pages %}
         <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.previous_page-1 }}"> {{ paginator.previous_page-1 }} </a>
       {% endif %}
@@ -23,7 +23,7 @@
         {% endfor %}
       {% else %}
         <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.next_page }}"> {{ paginator.next_page }} </a>
-        <a> ... </a>
+        <span> ... </span>
       {% endif %}
     {% endif %}
     <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}"> {{ paginator.total_pages }} </a>
