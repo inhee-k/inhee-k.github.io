@@ -14,13 +14,22 @@
     vertical-align: middle;
   }
 
-  .page_number {
+  a.page-number {
     display: inline-block;
-    vertical-align: sub;
+    color: $text-color;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    line-height: 1.9em;
 
-    @media (max-width: $x-sm-break) {
-      display: none;
+    &:hover, a.page-number.current {
+      background: white;
+      border: 1px solid $link-color;
     }
+  }
+
+  a.page-number.current {
+    pointer-events: none;
   }
 
   .button {
