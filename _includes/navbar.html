@@ -21,7 +21,6 @@
 	    <!-- Menu -->
 			<div class="dropdownContain hide">
 				<div class="dropOut hide">
-					<div class="triangle"></div>
 			    <ul>
 			        {% assign name_page = "" %}
 
@@ -49,12 +48,12 @@
 				if($(this).hasClass('on')) {
 					$(this).removeClass('on');
 					$('.dropdownContain').addClass('hide');
-					$('.dropOut').addClass('hide');
+					// $('.dropOut').addClass('hide');
 				}
 				else {
 					$(this).addClass('on');
 					$('.dropdownContain').removeClass('hide');
-					$('.dropOut').removeClass('hide');
+					// $('.dropOut').removeClass('hide');
 				}
 			});
 		});

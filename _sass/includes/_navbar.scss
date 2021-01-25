@@ -140,6 +140,7 @@ nav {
       z-index: 2;
       right: 5px;
       top: 50px;
+      opacity: 1;
     	-webkit-transition: all .1s ease-out;
     	-moz-transition: all .1s ease-out;
     	-ms-transition: all .1s ease-out;
@@ -148,12 +149,14 @@ nav {
 
       &.hide {
         top: -400px;
+        opacity: 0;
       }
 
       .dropOut {
-        background: white;
+        position: relative;
+        background: $background-color;
         float: left;
-        opacity: 1;
+
         border-radius: 4px;
         box-shadow: 0 1px 6px rgba(0,0,0,.15);
         -webkit-transition: all .1s ease-out;
@@ -162,17 +165,31 @@ nav {
       	-o-transition: all .1s ease-out;
       	transition: all .1s ease-out;
 
-        &.hide {
-          opacity: 0;
+        &:before, &:after {
+          bottom: 100%;
+          border: solid transparent;
+          content: "";
+          height: 0;
+          width: 0;
+          position: absolute;
         }
 
-        .triangle {
-          position: absolute;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          border-bottom: 8px solid white;
-          top: -8px;
+        &:before {
+          border-color: rgba(230, 230, 230, 0);
+          border-bottom-color: #e6e6e6;
+          border-width: 10px;
+          right: 8px;
+        }
+
+        &:after {
+          border-color: $background-color;
+          border-bottom-color: $background-color;
+          border-width: 8px;
           right: 10px;
+        }
+
+        &.hide {
+
         }
 
         ul {
