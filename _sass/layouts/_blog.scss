@@ -45,15 +45,24 @@
   background-position: 100% -50px, 0 center, center top;
 }
 
+.content {
+    background-color: #f5f5f5;
+}
+
+.blog-wrapper {
+    max-width: $m-break;
+    width: 95%;
+    margin: 0 auto;
+}
+
 /* --- Post listing --- */
 .posts {
   .post-teaser {
     @extend %padding-post;
-    max-width: $m-break;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px #ccc;
+    margin-bottom: 1em;
     background-size: $feature-image-size;
-    border-bottom: 1px solid $border-color;
 
     p a {
       @extend .body-link;
@@ -63,6 +72,7 @@
       vertical-align: middle;
       border-radius: 10px;
       overflow: hidden;
+      margin-bottom: 1em;
 
       @media (min-width: $break) {
         height: 250px;
