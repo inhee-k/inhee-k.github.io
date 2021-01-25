@@ -151,12 +151,17 @@ nav {
       }
 
       .dropOut {
+        display: block;
         position: relative;
         background: $background-color;
         float: left;
         border: 1px solid #e6e6e6;
         border-radius: 4px;
         box-shadow: 0 1px 6px rgba(0,0,0,.15);
+
+        &.hide {
+          display: none;
+        }
 
         &:before, &:after {
           bottom: 100%;
