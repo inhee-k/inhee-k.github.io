@@ -1,22 +1,22 @@
 // Mix-ins
 %padding-nav {
-  padding: $padding-small $padding-x-large;
-  @media (max-width: $xl-break) {
-    padding: $padding-small ($padding-large * 2);
-  }
-  @media (max-width: $l-break) {
-    padding: $padding-small $padding-large;
-  }
-  @media (max-width: $m-break) {
-    padding: $padding-small $padding-medium;
-  }
-  @media (max-width: $sm-break) {
-    padding: $padding-small $padding-x-small;
-  }
+  padding: $padding-x-small;
+  // @media (max-width: $xl-break) {
+  //   padding: $padding-small ($padding-large * 2);
+  // }
+  // @media (max-width: $l-break) {
+  //   padding: $padding-small $padding-large;
+  // }
+  // @media (max-width: $m-break) {
+  //   padding: $padding-small $padding-medium;
+  // }
+  // @media (max-width: $sm-break) {
+  //   padding: $padding-small $padding-x-small;
+  // }
 }
 
 %padding-post {
-  padding: $padding-x-small $padding-x-small;
+  padding: $padding-x-small;
   // @media (max-width: $xl-break) {
   //   padding: $padding-x-small ($padding-large * 2);
   // }

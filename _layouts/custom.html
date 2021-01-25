@@ -6,7 +6,8 @@ layout: default
     <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
         <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
         {% if include.is_post %}
-        {% include post_info.html author=page.author date=page.date %}
+        <!-- {% include post_info.html author=page.author date=page.date %} -->
+        {% include post_info.html date=page.date %}
         {% else %}
     </header>
     <section class="post-content">{{ content }}</section>

@@ -1,43 +1,32 @@
-{% if paginator.total_pages > 1 %}
 <div class="pagination">
-    <div class="previous">
-        
-        {% if paginator.previous_page and paginator.previous_page != 1%}
-        <!-- << -->
-        <a aria-label="{{ site.data.language.str_previous_page | default: 'Prev' }}" href="{{ '/' | relative_url }}" class="button">
-            <span><i class="fa fa-angle-double-left"></i></span>
-        </a>
-        {% endif %}
-        
-        <!-- < previous -->
-        <a aria-label="{{ site.data.language.str_previous_page | default: 'Prev' }}" href="{{ paginator.previous_page_path | relative_url }}"
-           {% unless paginator.previous_page %}style="visibility:hidden"{% endunless %} class="button">
-            <span><i class="fa fa-chevron-left"></i></span>
-            {{ site.data.language.str_previous_page | default: "Prev" }}
-        </a>
-    </div>
+  <a href="{{ '/' | relative_url }}">1</a>
+  {% if paginator.total_pages < 5 %}
+    {% for idx in (2..paginator.total_pages) %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', idx }}"> {{ idx }} </a>
+    {% endfor %}
+  {% else %}
+    {% if paginator.page < 4 %}
+      {% for idx in (2..paginator.total_page) %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', idx }}"> {{ idx }} </a>
+      {% endfor %}
+      <a> ... </a>
+    {% else %}
+      <a> ... </a>
+      {% if paginator.page == paginator.total_pages %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.previous_page-1 }}"> {{ paginator.previous_page-1 }} </a>
+      {% endif %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.previous_page }}"> {{ paginator.previous_page }} </a>
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.page }}"> {{ paginator.page }} </a>
+      {% if {{ paginator.total_pages - paginator.page }} < 3 %}
+        {% for idx in (paginator.next_page..paginator.total_page) %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', idx }}"> {{ idx }} </a>
+        {% endfor %}
+      {% else %}
+        <a> ... </a>
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}"> {{ paginator.total_pages }} </a>
+      {% endif %}
+    {% endif %}
 
-    <div class="page_number">
-        {{ paginator.page }} / {{ paginator.total_pages }}
-    </div>
+  {% endif %}
 
-    <div class="next">
-        
-        <!-- next > -->
-        <a aria-label="{{ site.data.language.str_next_page | default: 'Next' }}" href="{{ paginator.next_page_path | relative_url }}"
-           {% unless paginator.next_page %}style="visibility:hidden"{% endunless %} class="button">
-            {{ site.data.language.str_next_page | default: "Next" }}
-            <span><i class="fa fa-chevron-right"></i></span>
-        </a>
-
-        {% if paginator.next_page and paginator.next_page != paginator.total_pages %}
-        <!-- >> -->
-        <a aria-label="{{ site.data.language.str_next_page | default: 'Next' }}"
-        href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}" class="button">
-            <span><i class="fa fa-angle-double-right"></i></span>
-        </a>
-        {% endif %}
-        
-    </div>
 </div>
-{% endif %}
