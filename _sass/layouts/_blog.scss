@@ -46,7 +46,7 @@
 }
 
 .content {
-    background-color: #f5f5f5;
+    background-color: $background-color;
 }
 
 .blog-wrapper {
@@ -59,7 +59,7 @@
 .posts {
   .post-teaser {
     @extend %padding-post;
-    background-color: $background-color;
+    background-color: $brand-color;
     box-shadow: 3px 3px 5px #ccc;
     margin-bottom: 1em;
     background-size: $feature-image-size;

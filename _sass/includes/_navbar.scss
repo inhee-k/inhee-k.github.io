@@ -152,7 +152,7 @@ nav {
       .dropOut {
         display: block;
         position: relative;
-        background: $background-color;
+        background: $brand-color;
         float: left;
         border: 1px solid #e6e6e6;
         border-radius: 4px;
@@ -180,7 +180,7 @@ nav {
 
         &:after {
           border-color: rgba(255,255,255,0);
-          border-bottom-color: $background-color;
+          border-bottom-color: $brand-color;
           border-width: 8px;
           right: 10px;
         }
@@ -227,10 +227,10 @@ nav {
       text-align: center;
       font-size: 1em;
       position: relative;
-      background-color: darken($background-color, 2%);
+      background-color: darken($brand-color, 2%);
 
       &:nth-of-type(4n) {
-        background-color: $background-color;
+        background-color: $brand-color;
       }
 
       a {
