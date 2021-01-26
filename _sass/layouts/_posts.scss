@@ -3,23 +3,30 @@
   width: 100%;
 }
 
-.post-wrapper article {
-  background: $brand-color;
-  box-shadow: 3px 3px 5px #ccc;
-  margin: 1.5em;
+.post-wrapper {
+  margin-top: $padding-x-small;
 
-  header {
-    margin-bottom: 6%;
-    text-align: center;
-  }
+  article {
+    background: $brand-color;
+    box-shadow: 3px 3px 5px #ccc;
+    max-width: $m-break;
+    width: 95%;
+    margin: 0 auto;
+    padding: $padding-x-small;
 
-  a:hover {
-    @extend .body-link;
-  }
+   header {
+     margin-bottom: 6%;
+     text-align: center;
+   }
 
-  .footnotes {
-    font-size: 0.9em;
-  }
+   a:hover {
+     @extend .body-link;
+   }
+
+   .footnotes {
+     font-size: 0.9em;
+   }
+ }
 }
 
 footer {

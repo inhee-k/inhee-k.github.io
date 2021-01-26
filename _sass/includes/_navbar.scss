@@ -13,9 +13,12 @@
   }
 }
 
+.header-wrapper {
+  background: $brand-color;
+}
+
 .site-header {
   padding: 5px 5px 0 5px;
-  background: $brand-color;
   max-width: $m-break;
   margin: 0 auto;
 
@@ -205,19 +208,6 @@ nav {
     .separator {
       display: none !important;
     }
-
-    // ul {
-    //   width: 100%;
-    //   line-height: 2em;
-    //   overflow: hidden;
-    //
-    //   &.hide {
-    //     font-size: 0;
-    //     margin: 0;
-    //     opacity: 0;
-    //     padding: 0;
-    //   }
-    // }
 
     li {
       float: none;
