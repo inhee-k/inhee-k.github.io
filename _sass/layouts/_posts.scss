@@ -1,6 +1,11 @@
+.comments,
+.post-wrapper article {
+  max-width: $m-break;
+  margin: 0 auto;
+}
+
 .comments {
   @extend %padding-post;
-  width: 100%;
 }
 
 .post-wrapper {
@@ -9,9 +14,7 @@
   article {
     background: $brand-color;
     box-shadow: 3px 3px 5px #ccc;
-    max-width: $m-break;
     width: 95%;
-    margin: 0 auto;
     padding: $padding-x-small;
 
    header {
@@ -106,7 +109,7 @@ header {
 
   .post-content {
     @extend %padding-post;
-    padding-bottom: 0;
+    padding-top: 0;
   }
 
   footer {
