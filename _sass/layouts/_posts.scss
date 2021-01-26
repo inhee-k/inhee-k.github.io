@@ -1,5 +1,6 @@
 .comments,
-.post-wrapper article {
+.post-wrapper article,
+.tag-wrapper article {
   max-width: $m-break;
   margin: 0 auto;
 }
@@ -8,7 +9,8 @@
   @extend %padding-post;
 }
 
-.post-wrapper {
+.post-wrapper,
+.tag-wrapper {
   margin-top: $padding-x-small;
 
   article {
@@ -18,7 +20,7 @@
     padding: $padding-x-small;
 
    header {
-     margin-bottom: 6%;
+     margin-bottom: $padding-x-small;
      text-align: center;
    }
 
@@ -124,9 +126,9 @@ header {
 
 /*-- feature-image Responsive scrolling --*/
 .feature-image header {
-  @media screen and (max-width: $break) {
-    padding: $padding-large*1.5 $padding-small;
-  }
+  // @media screen and (max-width: $break) {
+  //   padding: $padding-large*1.5 $padding-small;
+  // }
 
   @media screen and (min-width: $break) {
     background-size: 120% auto;

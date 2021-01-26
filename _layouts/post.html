@@ -52,8 +52,8 @@ layout: default
   {% endif %}
 
   header#main {
-    background-repeat:no-repeat;
-  {% if page.feature-img %} background-image: url('{{ page.feature-img | relative_url }}');
+    /* background-repeat:no-repeat; */
+  {% if page.feature-img %} background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('{{ page.feature-img | relative_url }}');
   {% elsif page.color %}background-image: url('{{ site.color_image | relative_url }}');  {% endif %}
   }
 </style>
