@@ -1,0 +1,43 @@
+$shsn-font-path: "../../assets/fonts/spoqa-han-sans-neo" !default;
+
+/* normal */
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: local('Spoqa Han Sans Neo Regular'), local('SpoqaHanSansNeo-Regular'), url('#{$shsn-font-path}/SpoqaHanSansNeo-Regular.eot');
+    src: url('#{$shsn-font-path}/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$shsn-font-path}/Spoqa Han Sans Neo Regular.woff2') format('woff2'),
+        url('#{$shsn-font-path}/SpoqaHanSansNeo-Regular.woff') format('woff'),
+        url('#{$shsn-font-path}/Spoqa Han Sans Neo Regular.otf') format('truetype'),
+        url('#{$shsn-font-path}/SpoqaHanSansNeo-Regular.svg#GothicA1-Regular') format('svg');
+    font-weight: normal;
+    font-display: fallback;
+    unicode-range: U+0020-0040, U+005B-0060, U+007B-007E, U+AC00-U+D7AF;
+}
+
+/* thin */
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: local('Spoqa Han Sans Neo Thin'), local('SpoqaHanSansNeo-Thin'), url('#{$shsn-font-path}/SpoqaHanSansNeo-Thin.eot');
+    src: url('#{$shsn-font-path}/SpoqaHanSansNeo-Thin.eot?#iefix') format('embedded-opentype'),
+        url('#{$shsn-font-path}/Spoqa Han Sans Neo Thin.woff2') format('woff2'),
+        url('#{$shsn-font-path}/SpoqaHanSansNeo-Thin.woff') format('woff'),
+        url('#{$shsn-font-path}/Spoqa Han Sans Neo Thin.otf') format('truetype'),
+        url('#{$shsn-font-path}/SpoqaHanSansNeo-Thin.svg#GothicA1-Thin') format('svg');
+    font-weight: 100;
+    font-display: fallback;
+    unicode-range: U+0020-0040, U+005B-0060, U+007B-007E, U+AC00-U+D7AF;
+}
+
+/* bold */
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: local('Spoqa Han Sans Neo Bold'), local('SpoqaHanSansNeo-Bold'), url('#{$shsn-font-path}/SpoqaHanSansNeo-Bold.eot');
+    src: url('#{$shsn-font-path}/SpoqaHanSansNeo.eot?#iefix') format('embedded-opentype'),
+        url('#{$shsn-font-path}/Spoqa Han Sans Neo Bold.woff2') format('woff2'),
+        url('#{$shsn-font-path}/SpoqaHanSansNeo.woff') format('woff'),
+        url('#{$shsn-font-path}/Spoqa Han Sans Neo Bold.otf') format('truetype'),
+        url('#{$shsn-font-path}/SpoqaHanSansNeo.svg#GothicA1-Bold') format('svg');
+    font-weight: bold;
+    font-display: fallback;
+    unicode-range: U+0020-0040, U+005B-0060, U+007B-007E, U+AC00-U+D7AF;
+}
