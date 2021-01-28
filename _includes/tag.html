@@ -26,7 +26,6 @@
         <div class="tag-posts">
             <!-- Posts -->
             {% for post in tag[1] %}
-                <!-- {% if post.tags contains tag %} -->
                 <h5 class="tag-title">
                     <a href="{{ post.url | relative_url }}">
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -37,7 +36,6 @@
                         {{ post.date | date: "%B %-d, %Y" }}
                     </div>
                 </h5>
-                <!-- {% endif %} -->
             {% endfor %}
 
         </div>
