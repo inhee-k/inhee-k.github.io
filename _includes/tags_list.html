@@ -1,4 +1,4 @@
-{% assign tags = site.tags | sort %}
+{% assign tags = include.tags | split:'|' | sort | uniq %}
 
 {% if tags.size > 0 %}
 <footer>
