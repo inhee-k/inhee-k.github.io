@@ -11,12 +11,16 @@
     border-radius: 2em;
     box-shadow: 3px 3px 5px #ccc;
 
-    transition: all .5s;
+    transition: all .5s ease-in-out;
     opacity: 0;
     z-index: 1000;
 
     &:hover {
       border: 1px solid $theme-color;
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &.show {
