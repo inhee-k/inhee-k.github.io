@@ -1,14 +1,5 @@
-<!-- cycles through posts to get tags -->
-<!-- {% assign rawtags = "" %}
-{% for post in site.posts %}
-{% if post.tags.size > 0 %}
-{% assign post_tags = post.tags | join:'|' | append:'|' %}
-{% assign rawtags = rawtags | append:post_tags %}
-{% endif %}
-{% endfor %} -->
-
 <!-- Displays the list of tags-->
-<!-- {% include tags_cloud.html %} -->
+{% include tags_cloud.html %}
 
 <div class="tag-wrapper">
 
@@ -16,7 +7,7 @@
     <div class="posts">
         {% for tag in site.tags %}
         <h3 id="{{ tag | first | slugify }}" class="tag-anchor">
-            <a href="#{{ tag | first | slugify }}" style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+            <a href="#{{ tag | first | slugify }}">
               <i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
             <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a>
 
