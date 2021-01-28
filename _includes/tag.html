@@ -1,3 +1,5 @@
+{% assign sorted_tags = site.tags | sort %}
+
 <div class="tag-wrapper">
   <article>
     <!-- Displays the list of tags-->
@@ -5,7 +7,7 @@
 
     <!-- Displays the posts and pages that contains the tag-->
     <div class="posts">
-        {% for tag in site.tags %}
+        {% for tag in sorted_tags %}
         <h3 id="{{ tag | first | slugify }}" class="tag-anchor">
             <i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }}
         </h3>

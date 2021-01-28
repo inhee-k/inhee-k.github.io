@@ -1,13 +1,15 @@
-{% if site.tags.size > 0 %}
+{% assign sorted_tags = site.tags | sort %}
+
+{% if sorted_tags.size > 0 %}
 <footer>
   <div class="tag-list">
-    {% if tags.size == 1 %}
+    {% if sorted_tags.size == 1 %}
       <div class="meta">Tag</div>
     {% else %}
       <div class="meta">Tags</div>
     {% endif %}
 
-    {% for tag in site.tags %}
+    {% for tag in sorted_tags %}
     <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | first | slugify }}" style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
       <p><i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</p>
     </a>
