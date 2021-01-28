@@ -59,8 +59,6 @@
 .posts {
   .post-teaser {
     @extend %padding-post;
-    display: block;
-    color: $text-color;
     background-color: $brand-color;
     box-shadow: 3px 3px 5px #ccc;
     margin-bottom: 1em;

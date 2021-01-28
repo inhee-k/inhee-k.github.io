@@ -1,6 +1,16 @@
+.tag-wrapper {
+  margin-bottom: $padding-x-small;
+
+  div.meta {
+    display: none;
+  }
+}
+
 .tag-list {
   font-size: 0.9em;
-  text-align: left;
+  text-align: center;
+  padding: 0 3% 3%;
+  border-bottom: 1px solid #ccc;
 
   div.meta {
     margin-right: 0.5em;

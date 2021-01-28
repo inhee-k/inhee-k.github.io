@@ -8,15 +8,21 @@
   </div>
   <div class="posts">
       {% for post in paginator.posts %}
-      <a aria-label="{{ post.title }}" class="post-link post-teaser" href="{{ post.url | relative_url }}">
+      <div class="post-teaser">
           {% if post.thumbnail %}
           <div class="post-img">
-              <img alt="{{ post.title }}" src="{{ post.thumbnail | relative_url }}">
+              <a aria-label="{{ post.title }}" href="{{ post.url | relative_url }}">
+                  <img alt="{{ post.title }}" src="{{ post.thumbnail | relative_url }}">
+              </a>
           </div>
           {% endif %}
           <span>
             <header>
-              <h1> {{ post.title }} </h1>
+              <h1>
+                <a aria-label="{{ post.title }}" class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title }}
+                </a>
+              </h1>
               {% include post_info.html date=post.date %}
             </header>
             {% if site.excerpt or site.theme_settings.excerpt %}
@@ -32,7 +38,7 @@
         <!-- Tag list -->
         {% capture tag_list %}{{ post.tags | join: "|"}}{% endcapture %}
         {% include tags_list.html tags=tag_list %}
-      </a>
+      </div>
       {% endfor %}
   </div>
 
