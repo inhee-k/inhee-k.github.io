@@ -60,24 +60,23 @@ a.button {
 
 .button-link {
   &:hover {
-    background: $link-color;
-    border: 1px solid $link-color;
-    color: $background-color;
+    background: $brand-color;
+    border: 1px solid $theme-color;
     text-decoration: none;
   }
 }
 
 .body-link {
   &:hover {
-    text-decoration: underline;
-    color: darken($link-color, 15%);
+    text-decoration: none;
+    color: $theme-color;
   }
 }
 
 .post-link {
   &:hover {
     text-decoration: none;
-    color: lighten($link-color, 10%);
+    color: $theme-color;
   }
 }
 

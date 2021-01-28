@@ -1,12 +1,8 @@
 .tag-wrapper {
   margin-bottom: $padding-x-small;
 
-  .tag-list {
-    text-align: center;
-
-    div.meta {
+  .tag-list div.meta {
       display: none;
-    }
   }
 }
 
