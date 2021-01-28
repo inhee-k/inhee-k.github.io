@@ -8,7 +8,7 @@
         {% for tag in site.tags %}
         <h3 id="{{ tag | first | slugify }}" class="tag-anchor">
             <a href="#{{ tag | first | slugify }}">
-              <i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+              <i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }}</a>
             <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a>
 
         </h3>
