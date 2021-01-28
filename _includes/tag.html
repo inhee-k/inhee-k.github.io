@@ -1,7 +1,7 @@
-<!-- Displays the list of tags-->
-{% include tags_cloud.html %}
-
 <div class="tag-wrapper">
+  <article>
+    <!-- Displays the list of tags-->
+    {% include tags_cloud.html %}
 
     <!-- Displays the posts and pages that contains the tag-->
     <div class="posts">
@@ -28,9 +28,8 @@
                     </div>
                 </h5>
             {% endfor %}
-
         </div>
         {% endfor %}
-
     </div>
+  </article>
 </div>
