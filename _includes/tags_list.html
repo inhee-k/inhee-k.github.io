@@ -1,6 +1,6 @@
-<!-- {% assign tags = include.tags | split:'|' | sort | uniq %} -->
+{% assign tags = site.tags | sort %}
 
-{% if site.tags.size > 0 %}
+{% if tags.size > 0 %}
 <footer>
   <div class="tag-list">
     {% if tags.size == 1 %}
