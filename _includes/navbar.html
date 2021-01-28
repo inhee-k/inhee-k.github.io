@@ -41,22 +41,24 @@
 					</div>
 				</div>
 		</nav>
-		<button id="GoToTop" class="button-link"><i class="fa fa-2x fa-angle-double-up"></i></button>
+		<button id="Go2Top" class="button-link"><i class="fa fa-2x fa-angle-double-up"></i></button>
 	</header>
 </div>
 <section>
 	<script type="text/javascript">
 		$(function(){
 			$(window).scroll(function(){
-				if ($(window).scrollTop() > 300) {
-			    $('button#GoToTop').addClass('show');
+				if ($(window).scrollTop() > 200) {
+			    $('#Go2Top').addClass('show');
 			  } else {
-			    $('button#GoToTop').removeClass('show');
+			    $('#Go2Top').removeClass('show');
 			  }
 			});
 
-			$('button#GoToTop').click(function(){
-				$('html, body').animate({scrollTop:0}, '300');
+			$('#Go2Top').click(function(){
+				event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+        return false;
 			});
 
 			$('nav a#pull').click(function(){

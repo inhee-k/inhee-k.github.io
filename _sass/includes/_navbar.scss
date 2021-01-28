@@ -1,4 +1,4 @@
-button#GoToTop {
+#Go2Top {
     position: fixed;
     bottom: 1em;
     right: 1em;
@@ -11,9 +11,8 @@ button#GoToTop {
     border-radius: 2em;
     box-shadow: 3px 3px 5px #ccc;
 
-    transition: background-color .3s, opacity .5s, visibility .5s;
+    transition: all .5s;
     opacity: 0;
-    visibility: hidden;
     z-index: 1000;
 
     &:hover {
@@ -22,7 +21,6 @@ button#GoToTop {
 
     &.show {
       opacity: 1;
-      visibility: visible;
     }
 }
 
@@ -162,7 +160,7 @@ nav {
 }
 
 @media screen and (max-width: $break) {
-  button#GoToTop {
+  #Go2Top {
     box-shadow: none;
   }
 
