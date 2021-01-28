@@ -3,9 +3,10 @@
 {% if tags.size > 0 %}
 <footer>
   <div class="tag-list">
+
     {% for tag in tags %}
-    <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | cgi_escape }}">
-      <p><i class="fa fa-tag fa-fw"></i> {{ tag }}</p>
+    <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | first | slugify }}" style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+      <p><i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</p>
     </a>
     {% endfor %}
   </div>
