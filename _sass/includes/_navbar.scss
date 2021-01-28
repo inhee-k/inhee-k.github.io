@@ -162,6 +162,10 @@ nav {
 }
 
 @media screen and (max-width: $break) {
+  button#GoToTop {
+    box-shadow: none;
+  }
+
   nav {
     height: auto;
 
