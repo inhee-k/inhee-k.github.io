@@ -1,22 +1,22 @@
 <!-- cycles through posts to get tags -->
-{% assign rawtags = "" %}
+<!-- {% assign rawtags = "" %}
 {% for post in site.posts %}
 {% if post.tags.size > 0 %}
 {% assign post_tags = post.tags | join:'|' | append:'|' %}
 {% assign rawtags = rawtags | append:post_tags %}
 {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 <!-- Displays the list of tags-->
-{% include tags_cloud.html tags=rawtags %}
+<!-- {% include tags_cloud.html %} -->
 
 <div class="tag-wrapper">
 
     <!-- Displays the posts and pages that contains the tag-->
     <div class="posts">
-        {% for tag in tags %}
-        <h3 id="{{ tag | cgi_escape }}" class="tag-anchor">
-            <a href="#{{ tag | cgi_escape }}"><i class="fa fa-tag fa-fw"></i> {{ tag }}</a>
+        {% for tag in site.tags %}
+        <h3 id="{{ tag[0] | cgi_escape }}" class="tag-anchor">
+            <a href="#{{ tag[0] | cgi_escape }}"><i class="fa fa-tag fa-fw"></i> {{ tag[0] }}</a>
             <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a>
 
         </h3>
@@ -24,8 +24,8 @@
         <!-- Posts and collection for each tags -->
         <div class="tag-posts">
             <!-- Posts -->
-            {% for post in site.posts %}
-                {% if post.tags contains tag %}
+            {% for post in tag[1] %}
+                <!-- {% if post.tags contains tag %} -->
                 <h5 class="tag-title">
                     <a href="{{ post.url | relative_url }}">
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
                         {{ post.date | date: "%B %-d, %Y" }}
                     </div>
                 </h5>
-                {% endif %}
+                <!-- {% endif %} -->
             {% endfor %}
 
         </div>
