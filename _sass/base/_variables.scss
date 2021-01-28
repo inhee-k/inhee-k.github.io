@@ -24,31 +24,31 @@ $sm-break: 576px;
 $x-sm-break: 300px;
 
 // Brand colours
-$theme-color: #999;
-$brand-color: #fff;
-$background-color: #f5f5f5;
+$theme-color: #FCA311;
+$brand-color: #FFF;
+$background-color: #F5F5F5;
 $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 
 // Typography colours
-$text-color: #262626;
-$meta: #595959; //lowest gray for accessible color
+$text-color: #14213D;
+$meta: #5C79B8; //lowest gray for accessible color
 $link-color: $theme-color;
-$selection-color: #D4D4D4; // visible when highlighting text
+$selection-color: $theme-color; // visible when highlighting text
 $blockquote-color: #EEF7FA; // $background-color;
 
 // Header
 $header-background-color: darken($theme-color, 50%); // Only used when no header image
-$header-text-color: #fff;
-$header-link-color: #383838;
+$header-text-color: #FFF;
+$header-link-color: $theme-color;
 $navbar-separator-opacity: 0;
 
 // Feature image for articles
-$feature-image-text-color: #fff;
+$feature-image-text-color: #FFF;
 $feature-image-size: cover; // options include "cover", "contain", "auto"
 
 //Search colours
 $link-shadow: transparentize($link-color, .6); //rgba(26, 188, 156, 0.6);
-$text-shadow: #3f3f3f;
+$text-shadow: #3F3F3F;
 $search-color: #999;
 
 

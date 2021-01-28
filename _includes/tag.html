@@ -17,7 +17,7 @@
         <div class="tag-posts">
             <!-- Posts -->
             {% for post in tag[1] %}
-                <h5 class="tag-title">
+                <div class="tag-title">
                     <a href="{{ post.url | relative_url }}">
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
                         {{ post.title }}
@@ -26,7 +26,7 @@
                     <div class="meta">
                         {{ post.date | date: "%B %-d, %Y" }}
                     </div>
-                </h5>
+                </div>
             {% endfor %}
         </div>
         {% endfor %}

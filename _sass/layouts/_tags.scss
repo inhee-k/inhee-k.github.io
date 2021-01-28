@@ -20,6 +20,7 @@
   a.button {
     margin: 0.1em;
     padding: 0.2em 0.4em;
+    color: $text-color;
   }
 
   p {
@@ -29,10 +30,8 @@
 }
 
 .tag-anchor {
-  margin-bottom: $padding-x-small;
-
   a {
-    color: $link-color;
+    color: $text-color;
 
     &:hover {
       text-decoration: none;
@@ -47,6 +46,7 @@
   .tag-title {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 1.2em;
 
     a {
       margin-left: $padding-x-small;
