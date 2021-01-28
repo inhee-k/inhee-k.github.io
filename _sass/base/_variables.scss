@@ -31,14 +31,14 @@ $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 
 // Typography colours
 $text-color: #14213D;
-$meta: #2D4E6D; //lowest gray for accessible color
+$meta: #457B9D; //lowest gray for accessible color
 $link-color: $text-color;
-$selection-color: $background-color; // visible when highlighting text
+$selection-color: #E5E5E5; // visible when highlighting text
 $blockquote-color: #EEF7FA; // $background-color;
 
 // Header
 $header-background-color: darken($theme-color, 50%); // Only used when no header image
-$header-text-color: $text-color;
+$header-text-color: $brand-color;
 $header-link-color: $text-color;
 $navbar-separator-opacity: 0;
 

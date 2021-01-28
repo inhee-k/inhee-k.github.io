@@ -1,8 +1,16 @@
 .tag-wrapper {
   margin-bottom: $padding-x-small;
 
-  .tag-list div.meta {
-      display: none;
+  .posts {
+    padding: $padding-x-small;
+  }
+
+  .tag-list {
+    text-align: center;
+
+    div.meta {
+        display: none;
+    }
   }
 }
 
@@ -16,7 +24,6 @@
   a.button {
     margin: 0.1em;
     padding: 0.2em 0.4em;
-    color: $text-color;
   }
 
   p {
@@ -27,8 +34,6 @@
 
 .tag-anchor {
   a {
-    color: $text-color;
-
     &:hover {
       text-decoration: none;
     }
@@ -42,7 +47,7 @@
   .tag-title {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.2em;
+    font-weight: normal;
 
     a {
       margin-left: $padding-x-small;

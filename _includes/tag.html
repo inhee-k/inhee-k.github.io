@@ -7,17 +7,14 @@
     <div class="posts">
         {% for tag in site.tags %}
         <h3 id="{{ tag | first | slugify }}" class="tag-anchor">
-            <a href="#{{ tag | first | slugify }}">
-              <i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }}</a>
-            <a href="#{{ page.title }}" style="float: right"><i class="fa fa-chevron-up" aria-hidden="true"> </i> </a>
-
+            <i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }}
         </h3>
 
         <!-- Posts and collection for each tags -->
         <div class="tag-posts">
             <!-- Posts -->
             {% for post in tag[1] %}
-                <div class="tag-title">
+                <h4 class="tag-title">
                     <a href="{{ post.url | relative_url }}">
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
                         {{ post.title }}
@@ -26,7 +23,7 @@
                     <div class="meta">
                         {{ post.date | date: "%B %-d, %Y" }}
                     </div>
-                </div>
+                </h4>
             {% endfor %}
         </div>
         {% endfor %}
