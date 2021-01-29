@@ -10,7 +10,7 @@
     {% endif %}
 
     {% for tag in sorted_tags %}
-    <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | first | slugify }}" style="background: rgba(253, 163, 17, {{ tag | last | size  |  divided_by: sorted_tags.size | times:0.1 }}); font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%;">
+    <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | first | slugify }}" style="background: rgba(253, 163, 17, {{ tag | last | size  |  divided_by: sorted_tags.size | times: 1.0 }}); font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%;">
       <p><i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</p>
     </a>
     {% endfor %}
