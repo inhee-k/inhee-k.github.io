@@ -90,6 +90,10 @@
     position: absolute;
     right: 1em;
     top: .5em;
+
+    &:hover {
+      color: $theme-color;
+    }
   }
 
   #results-container {

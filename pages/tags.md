@@ -5,4 +5,4 @@ permalink: /tags/
 icon: "fa-tags"
 feature-img: "assets/img/pexels/books.jpg"
 ---
-{% include tag.html %}
+{% include tags.html %}

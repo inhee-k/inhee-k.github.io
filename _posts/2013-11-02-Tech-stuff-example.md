@@ -3,6 +3,7 @@ layout: post
 title: Tech Stuff example
 feature-img: "assets/img/feature-img/circuit.jpeg"
 thumbnail: "assets/img/thumbnails/feature-img/circuit.jpeg"
+categories: [Web]
 tags: [Test, Markdown]
 ---
 
@@ -28,7 +29,7 @@ find /etc -type f -exec cat '{}' \; | tr -c '.[:digit:]' '\n' | grep '^[^.][^.]*
 
 ## Code highlighting examples
 
-Because you might put code in your blog post and you want to make sure 
+Because you might put code in your blog post and you want to make sure
 it will look good in here.
 And that the search function is working!
 
@@ -107,7 +108,7 @@ def some_function(param_one="", param_two=0):
 
 class SomeClass:
     """ dunno what I am doing """
-    
+
     def __init__(self):
         pass
 ```
