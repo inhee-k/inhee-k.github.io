@@ -11,7 +11,7 @@
     border-radius: 2em;
     box-shadow: 3px 3px 5px #ccc;
 
-    transition: opacity .5s ease-in-out;
+    transition: opacity .5s, visibility .5s ease-in-out;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
