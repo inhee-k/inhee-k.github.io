@@ -101,35 +101,37 @@ header {
 }
 
 /* --- Feature image --- */
-.feature-image {
-  padding: 0;
+.post-wrapper {
+  .feature-image {
+    padding: 0;
 
-  .post-link {
-    color: $feature-image-text-color;
-  }
-
-  header {
-    color: $feature-image-text-color;
-    margin-bottom: 0;
-    padding: $padding-large/2.5 $padding-large;
-
-    .meta {
-      color: rgba($feature-image-text-color, .7);
+    .post-link {
+      color: $feature-image-text-color;
     }
-  }
 
-  .post-content {
-    @extend %padding-post;
-    padding-top: 0;
-  }
+    header {
+      color: $feature-image-text-color;
+      margin-bottom: 0;
+      padding: $padding-large/2.5 $padding-large;
 
-  footer {
-    @extend %padding-post;
-    padding-top: 0;
-  }
+      .meta {
+        color: rgba($feature-image-text-color, .7);
+      }
+    }
 
-  .feature-image-padding {
-    padding: $feature-image-padding;
+    .post-content {
+      @extend %padding-post;
+      padding-top: 0;
+    }
+
+    footer {
+      @extend %padding-post;
+      padding-top: 0;
+    }
+
+    .feature-image-padding {
+      padding: $feature-image-padding;
+    }
   }
 }
 
