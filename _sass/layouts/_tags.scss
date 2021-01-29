@@ -24,6 +24,11 @@
   a.button {
     margin: 0.1em;
     padding: 0.2em 0.4em;
+
+    &.hover-white:hover {
+      color: $brand-color;
+      border: 1px solid $text-color;
+    }
   }
 
   p {

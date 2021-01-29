@@ -10,9 +10,13 @@
     {% endif %}
 
     {% for tag in sorted_tags %}
-    {% assign t_size = sorted_tags.size | times: 1.0 %}
-    <a class="button" href="{{ "/tags" | relative_url }}#{{ tag | first | slugify }}" style="background: rgba(252, 163, 17, {{ tag | last | size  |  divided_by: t_size }}); font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%;">
-      <p><i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</p>
+
+    {% assign tags_size = sorted_tags.size | times: 1.0 %}
+    {% assign tag_size = tag | last | size %}
+    {% assign alpha = tag_size | divided_by: tags_size %}
+
+    <a class="button{% if alpha > 0.3 %} hover-white{% endif %}" href="{{ "/tags" | relative_url }}#{{ tag | first | slugify }}" style="background: rgba(69, 123, 157, {{ alpha }}); font-size: {{ tag_size  |  times: 4 | plus: 80  }}%;">
+      <p><i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag_size }})</p>
     </a>
     {% endfor %}
   </div>
