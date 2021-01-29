@@ -11,6 +11,18 @@
     div.meta {
         display: none;
     }
+
+    a.button {
+
+      &:hover {
+        color: $meta;
+        border: 1px solid $meta;
+      }
+
+      &.hover-white:hover {
+        color: $brand-color;
+      }
+    }
   }
 }
 
@@ -24,15 +36,6 @@
   a.button {
     margin: 0.1em;
     padding: 0.2em 0.4em;
-
-    &:hover {
-      color: $meta;
-      border: 1px solid $meta;
-    }
-
-    &.hover-white:hover {
-      color: $brand-color;
-    }
   }
 
   p {

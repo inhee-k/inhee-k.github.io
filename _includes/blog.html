@@ -1,6 +1,6 @@
 <div class="blog-wrapper">
   <div class="search-container">
-    <input type="text" id="search-input" placeholder="search.." class="search-bar">
+    <input type="text" id="search-input" placeholder="검색어를 입력하세요.." class="search-bar">
     <div class="find-icon">
       <i class="fa fa-search" aria-hidden="true"></i>
     </div>
@@ -73,7 +73,7 @@
           resultsContainer: document.getElementById('results-container'),
           json: '{{ "/assets/data/search.json" | relative_url }}',
           searchResultTemplate: '<div class="search-title"><a href="{url}">{title}</a><div class="search-date">{date}</div></div>',
-          noResultsText: '{{ site.data.language.str_no_result_found | default: "No result found" }}',
+          noResultsText: '{{ site.data.language.str_no_result_found }}',
           limit: 10,
           fuzzy: false,
           exclude: []

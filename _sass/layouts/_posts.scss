@@ -114,6 +114,25 @@ header {
       margin-bottom: 0;
       padding: $padding-large/2.5 $padding-large;
 
+      /*-- feature-image Responsive scrolling --*/
+
+      // @media screen and (max-width: $break) {
+      //   padding: $padding-large*1.5 $padding-small;
+      // }
+
+      @media screen and (min-width: $break) {
+        background-size: 120% auto;
+      }
+
+      @media screen and (max-width: $break) {
+        background-size: 200% auto;
+      }
+
+      // @media screen and (max-width: $sm-break) {
+      //   background-size: 400% auto;
+      // }
+
+
       .meta {
         color: rgba($feature-image-text-color, .7);
       }
@@ -132,24 +151,5 @@ header {
     .feature-image-padding {
       padding: $feature-image-padding;
     }
-  }
-}
-
-/*-- feature-image Responsive scrolling --*/
-.feature-image header {
-  // @media screen and (max-width: $break) {
-  //   padding: $padding-large*1.5 $padding-small;
-  // }
-
-  @media screen and (min-width: $break) {
-    background-size: 120% auto;
-  }
-
-  @media screen and (max-width: $break) {
-    background-size: 200% auto;
-  }
-
-  @media screen and (max-width: $sm-break) {
-    background-size: 400% auto;
   }
 }

@@ -72,8 +72,6 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
     -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -86,28 +84,18 @@
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $link-shadow;
     }
 
-    &::-moz-placeholder {
-      color: $search-color;
-      opacity: 1;
-    }
-
-    &:-ms-input-placeholder,
-    &::-webkit-input-placeholder {
-      color: $search-color;
-    }
   }
 
   .find-icon {
     position: absolute;
     right: 1em;
-    top: .7em;
+    top: .5em;
   }
 
   #results-container {
     display: none;
-    padding: 10px;
     width: 70%;
-    background: #FFF;
+    background: $brand-color;
     border: 1px solid #ccc;
     position: absolute;
     right: 0;
@@ -120,6 +108,11 @@
 
   .search-title {
     border-bottom: 1px solid #ccc;
+    padding: .3em .5em;
+
+    &:hover {
+      background-color: $background-color;
+    }
 
     a {
       display: block;
@@ -136,7 +129,7 @@
     }
 
     .search-date {
-      color: #636363;
+      color: $meta;
       font-size: .9em;
     }
   }
