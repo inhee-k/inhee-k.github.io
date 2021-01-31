@@ -9,31 +9,6 @@
   @extend %padding-post;
 }
 
-.post-wrapper,
-.tag-wrapper {
-  margin-top: $padding-x-small;
-
-  article {
-    background: $brand-color;
-    box-shadow: 3px 3px 5px #ccc;
-    width: 95%;
-    padding: $padding-x-small;
-
-   header {
-     margin-bottom: $padding-x-small;
-     text-align: center;
-   }
-
-   a:hover {
-     @extend .body-link;
-   }
-
-   .footnotes {
-     font-size: 0.9em;
-   }
- }
-}
-
 .post-teaser, .post-wrapper {
 
   header {

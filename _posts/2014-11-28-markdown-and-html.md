@@ -2,6 +2,7 @@
 layout: post
 title: Markdown and HTML
 tags: [Test, Markdown]
+categories: [자바 라이브 스터디]
 author: rohanchandra
 ---
 
@@ -23,7 +24,7 @@ Here's an example of an image, which is included using Markdown:
 ![Image of a glass on a book]({{ "/assets/img/pexels/book-glass.jpeg" | relative_url }})
 
 This is another example of list:
- 
+
  - list of things
    1. Sub list
    2. of Other things
@@ -34,7 +35,7 @@ This is another example of list:
        - and on ...
          - and on !
    - That's it.
-   
+
 ### Other subtitle
 
 Highlighting for code in Jekyll is done using Base16 or Rouge. This theme makes use of Rouge by default.
@@ -60,4 +61,3 @@ Type on Strap uses KaTeX to display maths. Equations such as $$S_n = a \times \f
 Alternatively, they can be shown on a new line:
 
 $$ f(x) = \int \frac{2x^2+4x+6}{x-2} $$
-

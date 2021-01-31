@@ -1,0 +1,21 @@
+.category-wrapper {
+  .posts {
+    display: inline-block;
+    padding: 0;
+
+    .post {
+      width: 50%;
+      float: left;
+
+      .category-anchor {
+        margin: 0;
+      }
+
+      .category-title {
+        margin-top: .3em;
+        margin-bottom: 0;
+        font-weight: normal;
+      }
+    }
+  }
+}

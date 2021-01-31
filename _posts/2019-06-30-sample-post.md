@@ -2,6 +2,7 @@
 layout: post
 title: Sample post
 tags: [A Tag, Test, Lorem, Ipsum]
+categories: [자바 라이브 스터디]
 excerpt_separator: <!--more-->
 ---
 
