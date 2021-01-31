@@ -1,9 +1,8 @@
 .comments,
-.post-wrapper article,
-.tag-wrapper article,
-.category-wrapper article {
-  max-width: $m-break;
-  margin: 0 auto;
+.post-wrapper article {
+  article {
+    @extend %wrapper-size;
+  }
 }
 
 .comments {
@@ -11,7 +10,6 @@
 }
 
 .post-teaser, .post-wrapper {
-
   header {
     h1 {
       margin: 0;

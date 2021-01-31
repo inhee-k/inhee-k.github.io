@@ -1,4 +1,8 @@
 .category-wrapper {
+  article {
+    @extend %wrapper-size;
+  }
+
   .posts {
     display: inline-block;
     padding: 0;

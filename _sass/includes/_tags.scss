@@ -21,6 +21,10 @@
 .tag-wrapper {
   margin-bottom: $padding-x-small;
 
+  article {
+    @extend %wrapper-size;
+  }
+
   .tag-list {
     text-align: center;
 
@@ -41,7 +45,7 @@
   }
 
   .posts {
-    padding: $padding-x-small;
+    @extend %padding-post;
 
     .tag-posts {
       display: inline-block;
