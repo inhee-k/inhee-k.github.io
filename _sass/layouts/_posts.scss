@@ -1,6 +1,7 @@
 .comments,
 .post-wrapper article,
-.tag-wrapper article {
+.tag-wrapper article,
+.category-wrapper article {
   max-width: $m-break;
   margin: 0 auto;
 }
