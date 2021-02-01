@@ -6,9 +6,11 @@
     <div class="posts">
         {% for category in sorted_categories %}
         <div class="post">
-          <h3 id="{{ category | first | cgi_escape }}" class="category-anchor">
+          <a href="/category/{{ category | first | cgi_escape }}">
+            <h3 id="{{ category | first | cgi_escape }}" class="category-anchor">
               <i class="fa fa-folder fa-fw"></i> {{ category[0] | replace:'-', ' ' }}
-          </h3>
+            </h3>
+          </a>
 
           <!-- Posts and collection for each categories -->
           <div class="category-posts">
@@ -23,8 +25,8 @@
               {% endfor %}
           </div>
           {% if category[1].size > 5 %}
-          <a href="" class="more">
-            더보기
+          <a href="/category/{{ category | first | cgi_escape }}" class="more">
+            <h4>더보기</h4>
             <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
           </a>
           {% endif %}

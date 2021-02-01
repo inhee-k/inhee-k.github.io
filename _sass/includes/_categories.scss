@@ -27,9 +27,13 @@
           margin-left: $padding-x-small;
         }
       }
+
+      a.more {
+        float: right;
+      }
     }
 
-    @media screen and (max-width: $sm-break) {
+    @media screen and (max-width: $break) {
       .post {
         width: 100%;
         height: auto;
