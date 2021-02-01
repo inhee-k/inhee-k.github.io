@@ -1,8 +1,6 @@
 .comments,
 .post-wrapper article {
-  article {
-    @extend %wrapper-size;
-  }
+  @extend %wrapper-size;
 }
 
 .comments {

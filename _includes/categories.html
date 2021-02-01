@@ -4,7 +4,7 @@
   <article>
     <!-- Displays the posts that contains the category-->
     <div class="posts">
-        {% for category in sorted_categories %}
+        {% for category in sorted_categories limit:5 %}
         <div class="post">
           <h3 id="{{ category | first | slugify }}" class="category-anchor">
               <i class="fa fa-folder fa-fw"></i> {{ category[0] | replace:'-', ' ' }}
@@ -16,12 +16,18 @@
               {% for post in category[1] %}
                   <h4 class="category-title">
                       <a href="{{ post.url | relative_url }}">
-                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          <i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>
                           {{ post.title }}
                       </a>
                   </h4>
               {% endfor %}
           </div>
+          {% if category[1].size > 5 %}
+          <a href="" class="more">
+            더보기
+            <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
+          </a>
+          {% endif %}
         </div>
         {% endfor %}
     </div>

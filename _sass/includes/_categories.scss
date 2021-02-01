@@ -1,4 +1,6 @@
 .category-wrapper {
+  margin-bottom: $padding-x-small;
+
   article {
     @extend %wrapper-size;
   }
@@ -9,6 +11,7 @@
 
     .post {
       width: 50%;
+      height: 200px;
       float: left;
 
       .category-anchor {
@@ -19,6 +22,18 @@
         margin-top: .3em;
         margin-bottom: 0;
         font-weight: normal;
+
+        a {
+          margin-left: $padding-x-small;
+        }
+      }
+    }
+
+    @media screen and (max-width: $sm-break) {
+      .post {
+        width: 100%;
+        height: auto;
+        float: none;
       }
     }
   }
