@@ -25,10 +25,12 @@
               {% endfor %}
           </div>
           {% if category[1].size > 5 %}
-          <a href="/category/{{ category | first | cgi_escape }}" class="more">
-            <h4>더보기</h4>
+          <h4 class="category-title">
+            <a href="/category/{{ category | first | cgi_escape }}" class="more">
+            더보기
             <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
-          </a>
+            </a>
+          </h4>
           {% endif %}
         </div>
         {% endfor %}
