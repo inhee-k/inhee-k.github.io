@@ -2,11 +2,15 @@
 layout: default
 ---
 
-<article {% if page.feature-img %}class="feature-image"{% endif %}>
+<article class="feature-image">
+  {% if page.feature-img %}
+    <header id="main" class="call-out" style="background-image: url('{{ page.feature-img | relative_url }}')">
+  {% else %}
+    <header id="main" class="call-out" style="background-image: url('{{ site.header_feature_image | relative_url }}')">
+  {% endif %}
 
-  <header id="main" class="call-out" style="background-image: url('{{ page.feature-img | relative_url }}')">
     {% if page.hide_title %}
-      <div class="feature-image-padding"></div>
+      <h1> {{ site.header_text }} </h1>
     {% else %}
       <h1 id="{{ page.title | default: "" | cgi_escape }}" class="title"> {{ page.title }}</h1>
       {% if page.subtitle %}
