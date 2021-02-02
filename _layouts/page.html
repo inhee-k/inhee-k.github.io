@@ -10,7 +10,7 @@ layout: default
   {% endif %}
 
     {% if page.hide_title %}
-      <h1> {{ site.header_text }} </h1>
+      <h1 class="title"> {{ site.header_text }} </h1>
     {% else %}
       <h1 id="{{ page.title | default: "" | cgi_escape }}" class="title"> {{ page.title }}</h1>
       {% if page.subtitle %}
