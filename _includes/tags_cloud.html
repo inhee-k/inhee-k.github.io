@@ -15,7 +15,7 @@
     {% assign tag_size = tag | last | size %}
     {% assign alpha = tag_size | divided_by: tags_size %}
 
-    <a class="button{% if alpha > 0.3 %} hover-white{% endif %}" href="{{ "/tags" | relative_url }}#{{ tag | first | cgi_escape }}" style="background: rgba(69, 123, 157, {{ alpha }}); font-size: {{ tag_size  |  times: 4 | plus: 80  }}%;">
+    <a class="button{% if alpha > 0.3 %} hover-white{% endif %}" href="#{{ tag | first | cgi_escape }}" style="background: rgba(69, 123, 157, {{ alpha }}); font-size: {{ tag_size  |  times: 4 | plus: 80  }}%;">
       <p><i class="fa fa-tag fa-fw"></i> {{ tag[0] | replace:'-', ' ' }} ({{ tag_size }})</p>
     </a>
     {% endfor %}
