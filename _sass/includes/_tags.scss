@@ -23,6 +23,11 @@
 
   article {
     @extend %wrapper-size;
+
+    h1.all-tags {
+        text-align: center;
+        margin-top: 0;
+    }
   }
 
   .tag-list {

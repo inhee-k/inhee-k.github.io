@@ -13,6 +13,7 @@
       width: 50%;
       height: 200px;
       float: left;
+      margin-bottom: 1em;
 
       .category-anchor {
         margin: 0;
@@ -30,10 +31,16 @@
 
       a.more {
         float: right;
+
+        h4 {
+          display: inline;
+        }
       }
     }
 
     @media screen and (max-width: $break) {
+      display: block;
+
       .post {
         width: 100%;
         height: auto;
