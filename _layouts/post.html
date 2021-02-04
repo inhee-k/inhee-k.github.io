@@ -40,20 +40,3 @@ layout: default
   {% include disqus.html %}{% endif %}
 
 </div>
-
-<!-- To change color of links in the page -->
-<style>
-  {% if page.color %}
-  .feature-image a { color: {{ page.color }} !important; }
-  div#post-nav a { color: {{ page.color }} !important; }
-  footer a { color: {{ page.color }} !important; }
-  .site-header nav a:hover {  color: {{ page.color }} !important; }
-  header#main { background-color: {{ page.color }} !important; }
-  {% endif %}
-
-  header#main {
-    /* background-repeat:no-repeat; */
-  {% if page.feature-img %} background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('{{ page.feature-img | relative_url }}');
-  {% elsif page.color %}background-image: url('{{ site.color_image | relative_url }}');  {% endif %}
-  }
-</style>
