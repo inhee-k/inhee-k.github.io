@@ -15,17 +15,7 @@ layout: page
         <!-- Posts and collection for each categories -->
         <div class="category-posts">
             <!-- Posts -->
-            {% for post in site.categories[category] %}
-                <h4 class="category-title">
-                    <a href="{{ post.url | relative_url }}">
-                        <i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>
-                        {{ post.title }}
-                    </a>
-                    <div class="meta">
-                        {{ post.date | date: "%B %-d, %Y" }}
-                    </div>
-                </h4>
-            {% endfor %}
+            {{ category }}
         </div>
       </div>
     </div>

@@ -178,7 +178,6 @@
         padding: 0;
         vertical-align: middle;
       }
-
     }
 
     .post-img img {
@@ -196,12 +195,12 @@
         transform: scale(1.1);
       }
     }
-
-    div.meta {
-        display: none;
-    }
   }
 
+  .category {
+    margin-bottom: .5em;
+  }
+  
   .excerpt {
     margin: 1em 0;
   }

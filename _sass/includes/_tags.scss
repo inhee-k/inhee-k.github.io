@@ -21,6 +21,12 @@ html {
   }
 }
 
+.blog-wrapper, tag-wrapper {
+  .tag-list meta {
+    display: none;
+  }
+}
+
 /* tag list in tags page */
 .tag-wrapper {
   margin-bottom: $padding-x-small;
@@ -34,12 +40,9 @@ html {
     }
   }
 
+  /* tags cloud */
   .tag-list {
     text-align: center;
-
-    div.meta {
-        display: none;
-    }
 
     a.button {
       &:hover {

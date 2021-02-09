@@ -39,31 +39,8 @@
     }
   }
 
-  /* --- Post info --- */
-  .post-info {
-    /* For border in author
-    border: 1px solid $border-color;
-    padding-left: 0.5em;
-    */
-    border-radius: 1em;
-    padding-right: 0.5em;
-    display: inline-flex;
+  .post-date {
 
-    a {
-      display: flex;
-      align-items: center;
-      img {
-        height: auto;
-      }
-    }
-
-    img {
-      border-radius: 1em;
-      padding: 0;
-      width: 1.5em;
-      height: 100%;
-      margin-right: 0.5em;
-    }
   }
 
   .post-content {
@@ -74,13 +51,8 @@
   footer {
     @extend %padding-post;
     padding-top: 0;
-
-    // width: 100%;
-    // margin-top: 0;
-    // margin-bottom: 0;
     font-size: 0.9em;
     display: inline-block;
-    // text-align: center;
 
     .meta {
       display: inline;

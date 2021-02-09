@@ -18,12 +18,23 @@
           {% endif %}
           <span>
             <header>
+              <div class="category meta">
+                <a href="/category/{{ post.category }}">
+                    <i class="fa fa-folder fa-fw"></i>
+                    {{ post.category }}
+                </a>
+              </div>
               <h1>
                 <a aria-label="{{ post.title }}" class="post-link" href="{{ post.url | relative_url }}">
                   {{ post.title }}
                 </a>
               </h1>
-              {% include post_info.html date=post.date %}
+              <div class="post-date">
+                  <p class="meta">
+                    {{ post.date | date: "%B %-d, %Y" }}
+                  </p>
+              </div>
+
             </header>
             {% if site.excerpt or site.theme_settings.excerpt %}
                 <div class="excerpt">
