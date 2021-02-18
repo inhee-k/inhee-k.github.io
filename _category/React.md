@@ -1,4 +1,4 @@
 ---
 layout: category
-title: React
+permalink: /category/React
 ---

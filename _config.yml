@@ -29,10 +29,10 @@ disqus_shortname: "inicn"                               # Your discus shortname 
 paginate: 5
 paginate_path: "/page:num"
 
+# Categories
 collections:
   category:
     output: true
-    permalink: /category/:name
 
 # BUILD SETTINGS
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]

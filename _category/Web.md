@@ -1,4 +1,4 @@
 ---
 layout: category
-title: Web
+permalink: /category/Web
 ---
