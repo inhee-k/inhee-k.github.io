@@ -6,7 +6,7 @@
     <div class="posts">
         {% for category in sorted_categories %}
         <div class="post">
-          <a href="/category/{{ category | first | cgi_escape }}">
+          <a href="{{ category.url }}">
             <h3 id="{{ category | first | cgi_escape }}" class="category-anchor">
               <i class="fa fa-folder fa-fw"></i> {{ category[0] | replace:'-', ' ' }}
             </h3>
