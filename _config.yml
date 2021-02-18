@@ -31,9 +31,9 @@ paginate_path: "/page:num"
 
 # Categories
 collections:
-  category:
+  categories:
     output: true
-    permalink: "/:collection/:name"
+    permalink: "/category/:name"
 
 defaults:
   -
