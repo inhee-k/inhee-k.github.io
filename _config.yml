@@ -33,7 +33,15 @@ paginate_path: "/page:num"
 collections:
   category:
     output: true
-    permalink: /:collection/:name
+    permalink: "/category/:name"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "category"
+    values:
+      layout: "category"
 
 # BUILD SETTINGS
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
