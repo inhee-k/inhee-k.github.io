@@ -37,7 +37,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "category"
+      type: "categories"
     values:
       layout: "category"
 
