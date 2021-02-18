@@ -1,11 +1,12 @@
+{% assign sorted_categories = site.categories | sort %}
 
 <div class="category-wrapper">
   <article>
     <!-- Displays the posts that contains the category-->
     <div class="posts">
-        {% for category in site.categories %}
+        {% for category in sorted_categories %}
         <div class="post">
-          <a href="{{ category.url }}">
+          <a href="/category/{{ category | first | cgi_escape }}">
             <h3 id="{{ category | first | cgi_escape }}" class="category-anchor">
               <i class="fa fa-folder fa-fw"></i> {{ category[0] | replace:'-', ' ' }}
             </h3>
