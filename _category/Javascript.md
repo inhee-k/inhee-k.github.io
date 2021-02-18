@@ -1,4 +1,4 @@
 ---
 layout: category
-permalink: /category/Javascript
+title: Javascript
 ---
