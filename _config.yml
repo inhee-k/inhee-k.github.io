@@ -31,13 +31,13 @@ paginate_path: "/page:num"
 
 # Categories
 collections:
-  categories:
+  category:
     output: true
 defaults:
   -
     scope:
       path: ""
-      type: "categories"
+      type: "category"
     values:
       layout: "category"
 

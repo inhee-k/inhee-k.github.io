@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files        = %w(README.md LICENSE)
   spec.metadata["plugin_type"] = "theme"
 
-  spec.files                   = `git ls-files -z`.split("\x0").select do |f|
+  spec.files                   = 'git ls-files -z'.split("\x0").select do |f|
     f.match(%r!^(assets/(js|css|fonts|data)/|_(includes|layouts|sass)/|_data/language.yml|(LICENSE|README.md))!i)
   end
 
@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", ">= 3.8", "< 5.0"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.9"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~>2.6"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6"
 end
