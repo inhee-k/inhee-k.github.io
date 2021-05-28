@@ -1,3 +1,3 @@
 ---
-permalink: /category/Web
+title: Web
 ---

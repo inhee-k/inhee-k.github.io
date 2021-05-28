@@ -1,3 +1,3 @@
 ---
-permalink: /category/Javascript
+title: Javascript
 ---
